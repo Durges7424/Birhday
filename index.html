@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Megha ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:linear-gradient(140deg,#fff0f6,#ffd6e8,#f9c1e0);
+ color:#8d315c;
+ font-family:Poppins,sans-serif;
+ overflow-x:hidden;
+ text-align:center;
+}
+
+section{
+ min-height:100vh;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ padding:35px 20px;
+ position:relative;
+}
+
+h1,h2{
+ font-family:'Dancing Script',cursive;
+ color:#e83e91;
+}
+
+h1{font-size:clamp(48px,12vw,76px)}
+h2{font-size:42px;margin-bottom:20px}
+
+p{line-height:1.9;font-size:15px}
+
+button{
+ border:0;
+ padding:14px 25px;
+ margin-top:22px;
+ border-radius:30px;
+ background:linear-gradient(45deg,#f34c9b,#ff9ecb);
+ color:white;
+ font-size:15px;
+ font-weight:600;
+ cursor:pointer;
+ box-shadow:0 5px 20px #e83e9155;
+ transition:.3s;
+}
+button:active{transform:scale(.94)}
+
+.card{
+ width:100%;
+ max-width:430px;
+ padding:28px 22px;
+ border-radius:25px;
+ background:#ffffffa8;
+ border:1px solid white;
+ box-shadow:0 10px 35px #d84b9022;
+ backdrop-filter:blur(10px);
+ margin-top:20px;
+}
+
+.hidden{display:none!important}
+
+.glow{
+ animation:glow 2s infinite alternate;
+}
+@keyframes glow{
+ to{text-shadow:0 0 25px #ff55a7}
+}
+
+.flower{font-size:55px;margin:15px}
+
+#timer{
+ display:flex;
+ justify-content:center;
+ gap:10px;
+ margin:25px 0;
+}
+
+.time{
+ background:#ffffffb8;
+ border-radius:15px;
+ padding:12px;
+ min-width:65px;
+ box-shadow:0 4px 15px #e83e9122;
+}
+
+.time b{display:block;font-size:25px;color:#e83e91}
+.time small{font-size:10px}
+
+.cake{
+ font-size:100px;
+ margin:20px;
+ animation:bounce 1.5s infinite;
+ cursor:pointer;
+}
+@keyframes bounce{
+ 50%{transform:translateY(-12px)}
+}
+
+.envelope{
+ font-size:85px;
+ cursor:pointer;
+ margin:15px;
+}
+
+#letterText{
+ line-height:2;
+ white-space:pre-line;
+ color:#96325e;
+}
+
+.heart{
+ position:fixed;
+ bottom:-30px;
+ animation:float 7s linear forwards;
+ pointer-events:none;
+ z-index:10;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+
+.promise{
+ background:#fff0f6;
+ padding:15px;
+ border-radius:15px;
+ margin:10px 0;
+}
+
+footer{padding:25px;color:#c44b83}
+</style>
+</head>
+
+<body>
+
+<!-- HOME -->
+<section id="home">
+ <div class="flower">🌸 🎀 🌸</div>
+ <p>A little surprise made with lots of love...</p>
+ <h1 class="glow">Hey Megha! ❤️</h1>
+ <p>Someone has a special surprise for you.</p>
+ <p style="margin-top:12px">Are you ready, Princess? 🥹</p>
+ <button onclick="show('countdown')">Open My Surprise 💌</button>
+</section>
+
+<!-- COUNTDOWN -->
+<section id="countdown" class="hidden">
+ <h2>Something Special Is Coming! 💗</h2>
+ <div class="flower">🦋 🌷 🦋</div>
+ <p>Countdown to your special day</p>
+
+ <div id="timer">
+  <div class="time"><b id="days">00</b><small>DAYS</small></div>
+  <div class="time"><b id="hours">00</b><small>HOURS</small></div>
+  <div class="time"><b id="minutes">00</b><small>MINUTES</small></div>
+  <div class="time"><b id="seconds">00</b><small>SECONDS</small></div>
+ </div>
+
+ <h1>14.11.2026</h1>
+ <p>Because someone as special as you deserves a special day! ❤️</p>
+ <button onclick="show('birthday')">Continue 💕</button>
+</section>
+
+<!-- BIRTHDAY -->
+<section id="birthday" class="hidden">
+ <p>Today is your day, beautiful!</p>
+ <h1 class="glow">Happy Birthday</h1>
+ <h1>Megha ❤️</h1>
+ <div class="cake" onclick="blow()">🎂</div>
+ <p id="cakeText">Tap the cake and make a wish! 🕯️</p>
+ <button onclick="show('letter')">A Letter For You 💌</button>
+</section>
+
+<!-- LETTER -->
+<section id="letter" class="hidden">
+ <h2>My Dear Megha 💗</h2>
+ <div class="card">
+  <div class="envelope" onclick="openLetter()">💌</div>
+  <p id="letterHint">Tap the envelope to open your letter</p>
+  <div id="letterText" class="hidden">
+🎂❤️ Happy Birthday Meri Sabse Special Girl! ❤️🥹
+
+Sabse pehle tumhe janamdin ki bahut bahut badhai. 🫂❤️
+
+Kaash aaj ke din main tumhare paas hota, tumhare saath hota, tumhari smile dekhta aur tumhara birthday special bana pata. Mujhe pata hai ki aaj tumhare paas tumhare apne nahi hain aur main bhi tumse door hoon. Lekin ek baat hamesha yaad rakhna, tum kabhi akeli nahi ho. Main chahe tumse kitni bhi door rahun, lekin dil se hamesha tumhare saath hoon. ❤️
+
+Tum mere liye sirf ek friend nahi ho, tum meri life ka bahut special aur important hissa ho. Tumhari khushi mere liye bahut maayne rakhti hai. Main chahta hoon ki tum hamesha khush raho, haste raho aur tumhare chehre ki smile kabhi kam na ho. 🥰
+
+Kabhi khud ko akela mat samajhna, kyunki jab bhi tumhe kisi ki zarurat ho, main tumhare saath khada milunga. Tumhari har chhoti-badi baat mere liye important hai. Ho sakta hai main har baar tumhare paas na aa paun, lekin tumhe kabhi akela mehsoos nahi hone dena chahta.
+
+Aur haan, ek baat tumse hamesha kehni hai... Madam, thoda apna khayal bhi rakha karo! 😒❤️ Har baar khud ko ignore karna, time par khana na khana, apni health ko seriously na lena, ye sab bilkul achha nahi lagta. Tum jitni dusron ke liye important ho, utni hi khud ke liye bhi important banna seekho. Main chahta hoon tum hamesha khush raho, healthy raho aur apna dhyan rakho.
+
+Bas meri yahi dua hai ki tumhari life mein dher saari khushiyan aayein, tumhare saare sapne poore hon aur tumhe woh sab mile jiski tum haqdar ho. ❤️
+
+Thank you meri life mein hone ke liye. Tum mere liye bahut special ho aur hamesha rahogi. 🥹❤️
+
+Once again, Happy Birthday meri special girl! 🎂🎉
+
+Distance chahe kitna bhi ho, tumhari jagah mere dil mein hamesha paas hi rahegi. ❤️🫂
+  </div>
+ </div>
+ <button onclick="show('promises')">One More Surprise 🥰</button>
+</section>
+
+<!-- PROMISES -->
+<section id="promises" class="hidden">
+ <h2>My Promises To You 💍</h2>
+ <div class="card">
+  <div class="promise">❤️ I promise to respect your feelings.</div>
+  <div class="promise">🌸 I promise to celebrate your happiness.</div>
+  <div class="promise">🫂 I promise to listen when you need me.</div>
+  <div class="promise">💕 I promise to keep making beautiful memories.</div>
+  <div class="promise">✨ I promise to never stop appreciating you.</div>
+ </div>
+ <button onclick="show('final')">The Final Surprise 🥹</button>
+</section>
+
+<!-- FINAL -->
+<section id="final" class="hidden">
+ <div class="flower">🌹 💗 🌹</div>
+ <h1 class="glow">Megha...</h1>
+ <h2>You Are Special!</h2>
+ <div class="card">
+  <p>
+   Shayad main aaj tumhare paas nahi hoon,
+   lekin meri har ek good wish tumhare saath hai.
+
+   Tum hamesha khush raho,
+   tumhari har wish poori ho,
+   aur tumhari smile kabhi kam na ho.
+
+   Ek din tumhara birthday saath celebrate karenge.
+
+   Tab tak ke liye ye chhota sa surprise
+   meri taraf se. ❤️
+  </p>
+  <h2 style="margin-top:25px">Forever Yours 💗</h2>
+ </div>
+ <button onclick="celebrate()">Once Again! 🎉</button>
+</section>
+
+<footer>Made with endless love ❤️ Just for Megha</footer>
+
+<script>
+function show(id){
+ document.querySelectorAll('section').forEach(s=>{
+  s.classList.add('hidden');
+ });
+ document.getElementById(id).classList.remove('hidden');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function updateTimer(){
+ const target=new Date(2026,10,14,0,0,0).getTime();
+ const now=Date.now();
+ let diff=target-now;
+
+ if(diff<=0){
+  document.getElementById('timer').innerHTML=
+  '<h2>It is your special day! 🎂</h2>';
+  return;
+ }
+
+ const d=Math.floor(diff/86400000);
+ const h=Math.floor(diff%86400000/3600000);
+ const m=Math.floor(diff%3600000/60000);
+ const s=Math.floor(diff%60000/1000);
+
+ document.getElementById('days').textContent=d;
+ document.getElementById('hours').textContent=h;
+ document.getElementById('minutes').textContent=m;
+ document.getElementById('seconds').textContent=s;
+}
+
+updateTimer();
+setInterval(updateTimer,1000);
+
+function blow(){
+ document.querySelector('.cake').innerHTML='🎂✨';
+ document.getElementById('cakeText').innerHTML=
+ 'Yayyy! Your wish is on its way! ❤️';
+ celebrate();
+}
+
+function openLetter(){
+ document.getElementById('letterText').classList.toggle('hidden');
+ document.getElementById('letterHint').innerHTML='A little piece of my heart ❤️';
+}
+
+function celebrate(){
+ const emojis=['❤️','💕','💗','🌸','✨','🎀','🦋'];
+ for(let i=0;i<50;i++){
+  const e=document.createElement('div');
+  e.className='heart';
+  e.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+  e.style.left=Math.random()*100+'vw';
+  e.style.fontSize=(18+Math.random()*20)+'px';
+  e.style.animationDuration=(3+Math.random()*4)+'s';
+  document.body.appendChild(e);
+  setTimeout(()=>e.remove(),7500);
+ }
+}
+
+setInterval(()=>{
+ const h=document.createElement('div');
+ h.className='heart';
+ h.textContent=['💗','💕','🌸','🦋'][Math.floor(Math.random()*4)];
+ h.style.left=Math.random()*100+'vw';
+ h.style.fontSize='20px';
+ h.style.animationDuration='7s';
+ document.body.appendChild(h);
+ setTimeout(()=>h.remove(),7000);
+},900);
+</script>
+
+</body>
+</html>
